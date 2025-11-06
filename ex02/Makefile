@@ -1,16 +1,16 @@
-NAME = phonebook
+NAME = Account
 CPP = c++ 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = PhoneBook.cpp Contact.cpp main.cpp
-OBJ = PhoneBook.o Contact.o main.o
+SRC = tests.cpp Account.cpp
+OBJ = tests.o Account.o
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CPP) $(FLAGS) -o $@ $^
 
-%.o: %.cpp Contact.hpp PhoneBook.hpp
+%.o: %.cpp Account.hpp
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
