@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 21:16:32 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/03 01:46:43 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/11 14:08:18 by ilhannou         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #include <iostream>
 #include <sstream>
@@ -63,7 +63,10 @@ void	search_contact(PhoneBook *book)
 		return ;
 	}
 	if (indx >= 0 && indx < 8)
-		book->showContact(indx);
+	{
+		if (book->showContact(indx))
+			std::cout << "Index invalid" << std::endl;
+	}
 	else
 		std::cout << "Index invalid" << std::endl;
 }

@@ -1,16 +1,16 @@
-NAME = violence
+NAME = Fixed
 CPP = c++ 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
-OBJ = HumanA.o HumanB.o Weapon.o main.o
+SRC = main.cpp Fixed.cpp
+OBJ = main.o Fixed.o
 
 all: $(NAME)
 
-$(NAME): $(OBJ) Weapon.hpp HumanA.hpp HumanB.hpp
+$(NAME): $(OBJ)
 	$(CPP) $(FLAGS) -o $@ $^
 
-%.o: %.cpp HumanA.hpp HumanB.hpp Weapon.hpp
+%.o: %.cpp Fixed.hpp
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:

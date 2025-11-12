@@ -1,33 +1,29 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/02 19:08:23 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/11 14:07:49 by ilhannou         ###   ########.fr       */
+/*   Created: 2025/11/07 12:33:05 by ilhannou          #+#    #+#             */
+/*   Updated: 2025/11/07 14:38:26 by ilhannou         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef HARL_H
+# define HARL_H
 
 #include <iostream>
-#include "Contact.hpp"
 
-class PhoneBook
+class Harl
 {
 	private:
-		Contact contact[8];
-		int index;
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
 	public:
-		PhoneBook() {
-			index = 0;
-		}
-		void addContact(std::string firstn, std::string lastn, std::string nickn, std::string phone, std::string secret);
-		void showAll();
-		int showContact(int indx) const;
+		void complain(std::string level);
 };
 
 #endif

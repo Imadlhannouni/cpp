@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
@@ -6,11 +6,12 @@
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 18:40:23 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/02 19:06:47 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/11 14:17:18 by ilhannou         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #include "Contact.hpp"
+#include <iomanip>
 
 void	Contact::setFirstName(const std::string &first) { firstname = first; }
 void	Contact::setLastName(const std::string &last) { lastname = last; }
@@ -50,7 +51,7 @@ void Contact::showC() const
 }
 
 void Contact::display() {
-	std::cout << "First name: " << truncate(firstname) << " | ";
-	std::cout << "Last name: " << truncate(lastname) << " | ";
-	std::cout << "Nickname: " << truncate(nickname) << std::endl;
+	std::cout << std::setw(10) << truncate(firstname) << "|";
+	std::cout << std::setw(10) << truncate(lastname) << "|";
+	std::cout << std::setw(10) << truncate(nickname) << "|" << std::endl;
 }

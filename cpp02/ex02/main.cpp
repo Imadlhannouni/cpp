@@ -1,33 +1,27 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/02 19:08:23 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/11 14:07:49 by ilhannou         ###   ########.fr       */
+/*   Created: 2025/11/08 19:06:50 by ilhannou          #+#    #+#             */
+/*   Updated: 2025/11/11 14:44:00 by ilhannou         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#include "Fixed.hpp"
 
-#include <iostream>
-#include "Contact.hpp"
+int main( void ) {
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
 
-class PhoneBook
-{
-	private:
-		Contact contact[8];
-		int index;
-	public:
-		PhoneBook() {
-			index = 0;
-		}
-		void addContact(std::string firstn, std::string lastn, std::string nickn, std::string phone, std::string secret);
-		void showAll();
-		int showContact(int indx) const;
-};
-
-#endif
+	std::cout << Fixed::min( a, b ) << std::endl;
+return 0;
+}
