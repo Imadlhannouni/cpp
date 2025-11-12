@@ -6,7 +6,7 @@
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 14:05:27 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/12 14:39:33 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/12 16:22:48 by ilhannou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ class Fixed
 		void setrawBits(int const raw);
 		float toFloat() const;
 		int toInt() const;
+		Fixed abs() const;
 };
 
 #endif

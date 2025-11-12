@@ -2,8 +2,8 @@ NAME = Fixed
 CPP = c++ 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Fixed.cpp
-OBJ = main.o Fixed.o
+SRC = main.cpp Fixed.cpp Point.cpp bsp.cpp
+OBJ = main.o Fixed.o Point.o bsp.o
 
 all: $(NAME)
 

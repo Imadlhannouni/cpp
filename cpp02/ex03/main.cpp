@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
@@ -6,22 +6,22 @@
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 19:06:50 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/11 14:44:00 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/12 16:29:42 by ilhannou         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 
 int main( void ) {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
+	Point A(0, 0);
+    Point B(4, 0);
+    Point C(0, 3);
+    Point P(0, 3);
 
-	std::cout << Fixed::min( a, b ) << std::endl;
-return 0;
+    if (bsp(A, B, C, P))
+        std::cout << "P is inside the triangle\n";
+    else
+        std::cout << "P is outside the triangle\n";
+
+    return 0;
 }
