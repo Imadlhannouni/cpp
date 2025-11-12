@@ -6,12 +6,12 @@
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 20:44:03 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/06 21:16:51 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:40:59 by ilhannou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_H
-# define WEAPON_H
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
 #include <iostream>
 

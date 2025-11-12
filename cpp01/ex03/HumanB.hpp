@@ -6,12 +6,12 @@
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 20:55:34 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/06 21:24:59 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:40:54 by ilhannou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_H
-# define HUMANB_H
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
 #include <iostream>
 #include "Weapon.hpp"
