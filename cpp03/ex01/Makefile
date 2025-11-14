@@ -1,16 +1,16 @@
-NAME = Fixed
+NAME = ClapTrap
 CPP = c++ 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Fixed.cpp Point.cpp bsp.cpp
-OBJ = main.o Fixed.o Point.o bsp.o
+SRC = main.cpp ClapTrap.cpp
+OBJ = main.o ClapTrap.o
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CPP) $(FLAGS) -o $@ $^
 
-%.o: %.cpp Fixed.hpp Point.hpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
