@@ -6,7 +6,7 @@
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 14:00:44 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/13 14:06:38 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/18 21:06:15 by ilhannou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,12 @@
 int main()
 {
 	ClapTrap c1("bot1");
+	ClapTrap c2(c1);
+	ClapTrap c3 = c2;
 	
 	c1.attack("bot2");
 	c1.takeDamage(3);
 	c1.beRepaired(5);
+	c2.beRepaired(6);
+	c3.attack("bot2");
 }
