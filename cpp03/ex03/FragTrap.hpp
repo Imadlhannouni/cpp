@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 14:14:35 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/18 17:08:29 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:08:00 by ilhannou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	public:
-		ScavTrap(std::string name);
-		~ScavTrap();
-		void guardGate();
-		void attack(const std::string &target);
+		FragTrap(std::string name);
+		~FragTrap();
+		void highFivesGuys();
 };
 
 #endif

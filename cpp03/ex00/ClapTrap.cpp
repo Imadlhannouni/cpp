@@ -6,7 +6,7 @@
 /*   By: ilhannou <ilhannou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 13:45:58 by ilhannou          #+#    #+#             */
-/*   Updated: 2025/11/13 14:05:19 by ilhannou         ###   ########.fr       */
+/*   Updated: 2025/11/18 13:31:44 by ilhannou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ void ClapTrap::attack(const std::string &target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "ClapTrap has been attacked, with " << amount << " damgage" << std::endl;
+	std::cout << "ClapTrap " << this->Name << " has been attacked, with " << amount << " damgage" << std::endl;
 	this->hit_points -= amount;
 	std::cout << "Health : " << this->hit_points << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "ClapTrap repair himself with " << amount << std::endl;
+	std::cout << "ClapTrap " << this->Name << " repair himself with " << amount << std::endl;
 	this->energy_points--;
 	this->hit_points += amount;
 	std::cout << "Health : " << this->hit_points << std::endl;

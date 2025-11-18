@@ -1,16 +1,16 @@
-NAME = ScavTrap
+NAME = FragTrap
 CPP = c++ 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
-OBJ = main.o ClapTrap.o ScavTrap.o
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+OBJ = main.o ClapTrap.o ScavTrap.o FragTrap.o
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CPP) $(FLAGS) -o $@ $^
 
-%.o: %.cpp ClapTrap.hpp ScavTrap.hpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
