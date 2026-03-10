@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdexcept>
+class AForm;
 
 class Bureaucrat {
 	private:
@@ -14,6 +15,7 @@ class Bureaucrat {
 		Bureaucrat(std::string Name, int grade);
 		void IncrementeGrade();
 		void DecrementGrade();
+		void executeForm(AForm const & form);
 		Bureaucrat& operator=(const Bureaucrat &other);
 		Bureaucrat(const Bureaucrat &other);
 		~Bureaucrat();
