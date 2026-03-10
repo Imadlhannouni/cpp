@@ -18,13 +18,16 @@ class Form {
 		int getGrade_e() const;
 		void beSigned(Bureaucrat& b);
 		void signForm(Bureaucrat& b);
+		Form& operator=(const Form &other);
+		Form(const Form &other);
+		virtual ~Form();
 		class GradeTooHighException : public std::exception {
 			public :
-				const char* what() const noexcept override;
+				const char* what() const throw();
 		};
 		class GradeTooLowException : public std::exception {
 			public :
-				const char* what() const noexcept override;
+				const char* what() const throw();
 		};
 };
 
